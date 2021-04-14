@@ -1,7 +1,7 @@
 import * as readlineSync from "readline-sync";
 import { Tree } from "./tree.js";
 
-const tree = new Tree<string>();
+const tree = new Tree();
 
 let actionCode: string = "1";
 let newKey: number, newData;
@@ -11,7 +11,7 @@ while (actionCode !== "5") {
     switch (actionCode) {
         case ("1"):
             newKey = Number(readlineSync.question("Enter key: "));
-            newData = readlineSync.question("Enter data: ").toString();
+            newData = readlineSync.question("Enter data: ");
             tree.Insert(newKey, newData);
             break;
         case("2"):

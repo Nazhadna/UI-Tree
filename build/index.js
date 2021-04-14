@@ -8,7 +8,7 @@ while (actionCode !== "5") {
     switch (actionCode) {
         case ("1"):
             newKey = Number(readlineSync.question("Enter key: "));
-            newData = readlineSync.question("Enter data: ").toString();
+            newData = readlineSync.question("Enter data: ");
             tree.Insert(newKey, newData);
             break;
         case ("2"):
